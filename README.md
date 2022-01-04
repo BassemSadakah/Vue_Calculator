@@ -1,4 +1,4 @@
-# codemind_calc
+# Vue_Calculator
 
 ## Project setup
 ```
