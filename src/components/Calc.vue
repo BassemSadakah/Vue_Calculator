@@ -1,30 +1,30 @@
 <template>
 <v-container>
-  <v-card dark  light elevation="2" rounded="xl" max-width="370" class="calc_container mx-auto mt-16 pa-5">
+  <v-card dark elevation="2" rounded="xl" max-width="370" class="mx-auto mt-16 pa-5">
       <div class="px-4 py-10 d-flex flex-column justify-end align-end" style="height:250px;">
         <span style="max-width:310px;overflow-y:hidden" class="d-flex flex-column-reverse title grey--text mb-2" v-html="history.join('')"></span>
         <span class="display-2" >{{shownInput}}</span>
       </div>
       <div class="d-flex flex-row">
-              <v-btn @click="handleClear" min-width="0" height="unset"  color="red" elevation="0" class="calc_btn title rounded-md">C</v-btn>   
-              <v-btn min-width="0" height="unset"  color="teal accent-4" elevation="0" class="calc_btn title rounded-md">(</v-btn>   
-              <v-btn min-width="0" height="unset"  color="teal accent-4" elevation="0" class="calc_btn title rounded-md">)</v-btn>   
-              <v-btn @click="handleSignClick('&divide;')" min-width="0" height="unset"  color="orange" elevation="0" class="calc_btn title rounded-md"> &divide;</v-btn>   
+              <v-btn @click="handleClear" min-width="0" height="unset"  color="red"  class="calc_btn title rounded-md">C</v-btn>   
+              <v-btn min-width="0" height="unset"  color="teal accent-4"  class="calc_btn title rounded-md">(</v-btn>   
+              <v-btn min-width="0" height="unset"  color="teal accent-4"  class="calc_btn title rounded-md">)</v-btn>   
+              <v-btn @click="handleSignClick('&divide;')" min-width="0" height="unset"  color="orange"  class="calc_btn title rounded-md"> &divide;</v-btn>   
       </div>
       <div class="d-flex flex-row">
         <div class="d-flex flex-row flex-wrap-reverse justify-space-around">
-              <v-btn v-for="(n,i) in Array(9)" :key="i" @click="handleDigitClick(i+1)" min-width="0" height="unset"  color="gray" elevation="0" class="calc_btn title rounded-md">{{i+1}}</v-btn>   
+              <v-btn v-for="(n,i) in Array(9)" :key="i" @click="handleDigitClick(i+1)" min-width="0" height="unset"  color=""  class="calc_btn title rounded-md">{{i+1}}</v-btn>   
         </div>
         <div class="d-flex flex-col flex-wrap justify-space-around">
-              <v-btn @click="handleSignClick('&times;')" min-width="0" height="unset"  color="orange" elevation="0" class="calc_btn title rounded-md">&times;</v-btn>   
-              <v-btn @click="handleSignClick('+')" min-width="0" height="unset"  color="orange" elevation="0" class="calc_btn title rounded-md">+</v-btn>   
-              <v-btn @click="handleSignClick('-')" min-width="0" height="unset"  color="orange" elevation="0" class="calc_btn title rounded-md">-</v-btn>   
+              <v-btn @click="handleSignClick('&times;')" min-width="0" height="unset"  color="orange"  class="calc_btn title rounded-md">&times;</v-btn>   
+              <v-btn @click="handleSignClick('+')" min-width="0" height="unset"  color="orange"  class="calc_btn title rounded-md">+</v-btn>   
+              <v-btn @click="handleSignClick('-')" min-width="0" height="unset"  color="orange"  class="calc_btn title rounded-md">-</v-btn>   
         </div>
       </div>
       <div class="d-flex flex-row">
-              <v-btn @click="handleDigitClick(0)" min-width="0" height="unset"  color="" elevation="0" class="calc_btn title rounded-md flex-grow-1" style="aspect-ratio:unset">0</v-btn>   
-              <v-btn @click="handleDecimalClick('.')" min-width="0" height="unset"  color="" elevation="0" class="calc_btn title rounded-md flex-grow-0">.</v-btn>   
-              <v-btn @click="handleEqualClick()" min-width="0" height="unset"  color="green accent-4" elevation="0" class="calc_btn title rounded-md flex-grow-0" style="aspect-ratio:unset">=</v-btn>   
+              <v-btn @click="handleDigitClick(0)" min-width="0" height="unset"  color=""  class="calc_btn title rounded-md flex-grow-1" style="aspect-ratio:unset">0</v-btn>   
+              <v-btn @click="handleDecimalClick('.')" min-width="0" height="unset"  color=""  class="calc_btn title rounded-md flex-grow-0">.</v-btn>   
+              <v-btn @click="handleEqualClick()" min-width="0" height="unset"  color="green accent-4"  class="calc_btn title rounded-md flex-grow-0" style="aspect-ratio:unset">=</v-btn>   
       </div>
       
   </v-card>
